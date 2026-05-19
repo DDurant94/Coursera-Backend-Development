@@ -18,8 +18,11 @@ namespace ProgramNameSpace
       {
         Name = "Laptop",
         Price = 999.99m,
-        Tags = new List<string> { "Electronics", "Computers" }
+        Tags = new List<string> { "Electronics", "Computers" },
       };
+
+      // string json = "{\"Name\": \"Laptop\", \"Price\": 999.99, \"Tags\": [\"Electronics\", \"Computers\"]}";
+      // Product product = JsonConvert.DeserializeObject<Product>(json);
 
       string json = JsonConvert.SerializeObject(product, Formatting.Indented);
       Console.WriteLine(json);
